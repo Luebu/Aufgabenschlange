@@ -4,7 +4,7 @@ public class Datenstruktur {
     Scanner sc = new Scanner(System.in);
     private Knoten first;
 
-    public void hinzufuegen(Aufgabe pAufgabe, int pZahl) {
+    public void hinzufuegen(int pZahl) {
         if (first == null) {
             first = new Knoten(sc.next(), sc.nextInt(), sc.nextInt(), sc.nextInt());
         } else {
