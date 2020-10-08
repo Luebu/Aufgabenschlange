@@ -3,9 +3,9 @@ import java.util.Date;
 public class Aufgabe {
     private String text;
     private Date datum;
-    Aufgabe(String pText, Date pDatum){
+    Aufgabe(String pText, int pJ, int pM, int pT){
         text=pText;
-        datum=pDatum;
+        datum=new Date(pJ,pM,pT);
     }
 
     public Date getDatum() {
