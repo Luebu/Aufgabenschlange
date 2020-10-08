@@ -1,5 +1,5 @@
 public class Datenstruktur {
-    private Knoten first;
+    private Knoten first=new Knoten();
     public void hinzufuegen(Aufgabe pAufgabe){
 
     }
