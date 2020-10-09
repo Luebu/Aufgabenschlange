@@ -38,6 +38,8 @@ public class Datenstruktur {
             return;
         }
         Knoten aE = first;
+        System.out.println(aE.getInhalt().getText());
+        System.out.println(aE.getInhalt().getDatum());
         while (aE.getNachfolger() != null) {
             System.out.println(aE.getInhalt().getText());
             System.out.println(aE.getInhalt().getDatum());
