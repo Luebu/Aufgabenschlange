@@ -24,7 +24,7 @@ public class Datenstruktur {
             }
             Knoten temp = new Knoten(text, j, m, t);
             if (aE.getNachfolger() != null) {
-                temp.setNachfolger(aE.getNachfolger().getNachfolger());
+                temp.setNachfolger(aE.getNachfolger());
                 aE.setNachfolger(temp);
             }else{
                 aE.setNachfolger(temp);
@@ -41,9 +41,10 @@ public class Datenstruktur {
         System.out.println(aE.getInhalt().getText());
         System.out.println(aE.getInhalt().getDatum());
         while (aE.getNachfolger() != null) {
+            aE = aE.getNachfolger();
             System.out.println(aE.getInhalt().getText());
             System.out.println(aE.getInhalt().getDatum());
-            aE = aE.getNachfolger();
+
         }
     }
 
@@ -59,8 +60,13 @@ public class Datenstruktur {
                 return false;
             }
         }
-        aE.setNachfolger(aE.getNachfolger().getNachfolger());
-        return true;
+        if(aE.getNachfolger()!=null) {
+            aE.setNachfolger(aE.getNachfolger().getNachfolger());
+            return true;
+        }else{
+            aE.setNachfolger(null);
+            return true;
+        }
     }
 
     public Knoten getFirst() {
